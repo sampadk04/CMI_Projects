@@ -1,0 +1,10 @@
+raw_data_path: data/raw/smsspamcollection/SMSSpamCollection
+
+tfidf_save_path: models/tfidf.pickle
+
+random_state: 42
+
+train_val_test_save_paths:
+- data/split/train.csv
+- data/split/val.csv
+- data/split/test.csv

@@ -1,0 +1,92 @@
+smote_random_state: 42
+
+train_val_test_save_paths:
+- data/split/train.csv
+- data/split/val.csv
+- data/split/test.csv
+
+model_save_paths:
+  Logit_save_path: models/best_Logit.joblib
+  RFC_save_path: models/best_RFC.joblib
+  GBC_save_path: models/best_GBC.joblib
+  ABC_save_path: models/best_ABC.joblib
+
+model_param_grids:
+  Logit_param_grid:
+    penalty:
+    - l1
+    - l2
+    C:
+    - 0.001
+    - 0.01
+    - 0.1
+    - 1
+    - 10
+    solver:
+    - liblinear
+    max_iter:
+    - 100
+    - 200
+    - 500
+  
+  RFC_param_grid:
+    n_estimators:
+    - 50
+    - 100
+    - 200
+    max_depth:
+    - 5
+    - 10
+    - 15
+    min_samples_split:
+    - 2
+    - 5
+    - 10
+    min_samples_leaf:
+    - 1
+    - 2
+    - 4
+    max_features:
+    - sqrt
+    - log2
+  
+  GBC_param_grid:
+    loss:
+    - log_loss
+    - exponential
+    learning_rate:
+    - 0.01
+    - 0.05
+    - 0.1
+    n_estimators:
+    - 100
+    - 200
+    - 500
+    max_depth:
+    - 3
+    - 4
+    - 5
+    min_samples_split:
+    - 2
+    - 4
+    - 6
+    min_samples_leaf:
+    - 1
+    - 2
+    - 4
+    max_features:
+    - sqrt
+    - log2
+  
+  ABC_param_grid:
+    n_estimators:
+    - 50
+    - 100
+    - 200
+    learning_rate:
+    - 0.1
+    - 0.5
+    - 1.0
+    algorithm:
+    - SAMME
+    - SAMME.R

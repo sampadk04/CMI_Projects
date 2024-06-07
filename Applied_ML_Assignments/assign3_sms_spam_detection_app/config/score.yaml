@@ -1,0 +1,7 @@
+input_text: Congratulations! You have been selected to receive a free trip to Hawaii! Click the link to claim your prize now.
+
+best_clf_save_path: models/best_clf.joblib
+
+tfidf_save_path: models/tfidf.pickle
+
+threshold: 0.5

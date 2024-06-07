@@ -1,0 +1,123 @@
+# Problem: Fraud Detection
+
+## Problem Framing
+
+- Current State:
+    1. Questions:
+        - What is the current situation (pains/desires) that we want to address and why?
+    2. Qualitative:
+        - High rate of fraudulent transactions => negative impact on customer trust and reputation => potential loss of revenue
+    3. Quantitative:
+        - 10% fraudulent transactions => 5% loss in revenue
+
+- Objectives:
+    1. Questions:
+        - What is that we want to do and why? (to improve topline/bottomline?)
+    2. Quantitative:
+        - Reduce fraudulent transactions by at least 50% (from 10% to 5%) => 2.5% increase in revenue
+    3. Qualitative: 
+        - Build a model that can detect fraudulent transactions as soon as they occur
+        - decrease fraud => improve customer trust and reputation => increase revenue => improve topline
+
+- Benefit/Cost Tradoff and Prioritisation:
+    1. Questions:
+        - What are the cost of errors/benefits of correct predictions and why?
+    2. Quantitative:
+        - Cost-benefit matrix, True Positive Rate, False Positive Rate, False Negative Rate, True Negative Rate
+    3. Qualitative:
+        - Cost of errors: 
+            - FN => fraudulent transaction not detected => loss of revenue
+            - FP => legitimate transaction flagged as fraudulent => negative impact on customer experience => potential loss of revenue
+        - Benefits of correct predictions:
+            - TP => correctly detected fraudulent transaction => potential loss of revenue prevented
+            - TN => correctly kept non-fraudulent transaction => maintained customer experience as expected => no significant impact on revenue
+
+- Constraints:
+    1. Questions:
+        - What are the acceptable risks/budgets and why?
+    2. Quantitative:
+        - At most 1% FN => 0.1% negative impact on customer experience => 0.1% risk of revenue loss => acceptable risk for 2.5% potential upside in revenue
+    3. Qualitative:
+        - Minimizing FN is important
+        - Can only afford a small FN percent => very small percent of negative customer experience => limited risk of revenue loss => acceptable risk for potential gain in revenue
+
+- Desired State:
+    1. Questions:
+        - What is the desired outcome (benefits/costs) that we want to see and why?
+    2. Quantitative:
+        - At least 50% decrease in fraudulent transactions (from 10% to 5%) => 2.5% increase in revenue
+        - at most 1% false negatives => 0.1% negative impact on customer experience => 0.1% risk to revenue
+    3. Qualitative:
+        - Benefit: significantly lesser fraud => significantly better customer trust and reputation => significantly better revenue
+        - Cost: very few false positives => limited risk of negative customer experience => limited risk to revenue
+
+
+## Why ML?
+
+- Best non-ML aternative hypothesis:
+    1. Question:
+        - what are the non-ML alternatives and why are they problematic? (pains/missed gains)?
+    2. Quantitative:
+        - 30% FN 60% FP => Too many data, inefficient algorithms => Not detecting enough fraudulent transactions and causing more financial loss and negative customer experience => 5% revenue loss risk
+    3. Qualitative:
+        - look at transaction details: amount, location, source, etc.
+        - compare with previous transactions: avg transaction
+
+
+- ML value proposition hypothesis:
+    1. Question:
+        - What are the advantages (pain relievers/gain creators) of ML solution and why?
+    2. Quantitative:
+        - 5% FN 20% FP => 50% decrease in fraudulent transactions (from 10% to 5%) at the expense of 0.1% bad customer experience => 2.5% increase in revenue at the expense of 0.1% risk
+    3. Qualitative:
+        - much fewer FN and FP => much better customer trust and reputation => much better revenue
+
+- ML feasibility hypothesis:
+    1. Question:
+        - What data and model are good candidates and why?
+    2. Quantitative:
+        - data: around five thousand samples
+        - model: state of the art deep learning solutions with 5% FP 10% FN
+    3. Qualitative:
+        - data: labelled samples of historic transaction data is available
+        - model: state of the art review suggests promising deep learning candidates are available
+
+
+## ML Solution Design
+
+- Data:
+    1. Choices:
+        - (Labelled) transaction data
+    2. Metrics:
+        - Label imbalance
+    3. Experiment:
+        - Randomized 70/15/15 train/validation/test split
+
+- Model:
+    1. Choices:
+        - Pr(Fraud) (probability of fraud)
+    2. Metrics:
+        - AUCPR (precision recall curve)
+    3. Experiment:
+        - Random Forest, XGBoost, Neural Networks
+        - train these benchmark models using train data
+        - validate and tune using validation data
+        - select the model with best AUCPR on test data
+
+- Action:
+    1. Choices:
+        - If Pr(Fraud) > threshold: transaction is fraudulent, flag for manual review
+    2. Metrics:
+        - Precision, recall, confusion matrix
+    3. Experiment:
+        - Choose a threshold to maximise the recall (estimated reward) subject to precision > 95%
+
+- Reward:
+    1. Choices:
+        - Decrease in fraudulent transactions; cost of misclassification
+    2. Metrics:
+        - % decrease in fraudulent transactions
+        - % increase in customer satisfaction
+    3. Experiment:
+        - Shadow test
+        - A/B test

@@ -1,0 +1,5 @@
+best_clf_save_path: models/best_clf.joblib
+
+tfidf_save_path: models/tfidf.pickle
+
+threshold: 0.5

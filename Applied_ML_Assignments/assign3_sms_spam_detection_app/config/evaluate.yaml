@@ -1,0 +1,12 @@
+train_val_test_save_paths:
+- data/split/train.csv
+- data/split/val.csv
+- data/split/test.csv
+
+model_save_paths:
+  Logit_save_path: models/best_Logit.joblib
+  RFC_save_path: models/best_RFC.joblib
+  GBC_save_path: models/best_GBC.joblib
+  ABC_save_path: models/best_ABC.joblib
+
+best_clf_save_path: models/best_clf.joblib

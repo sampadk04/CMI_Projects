@@ -1,0 +1,11 @@
+# MacOS Files
+.DS_Store
+
+# Data Folders (and subfolders)
+raw/
+
+# Python Cache
+__pycache__/
+
+# VSCode Settings
+.vscode/
