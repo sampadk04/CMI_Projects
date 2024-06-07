@@ -1,0 +1,37 @@
+Identify the flow using Machine Learning algorithms based on statistical properties. 
+
+https://drive.google.com/file/d/1EkJaorKDM3yHW2_2mZZ2lWz0r_9HDbf4/view?usp=drive_link
+
+https://drive.google.com/file/d/1Brjk0FNRrJEKc-ywvR9XYCJN5DsdtVPO/view?usp=drive_link
+
+https://drive.google.com/file/d/1eq7Ugp4sqNBHT2nBIlOUZA1tDSSUXQI0/view?usp=drive_link
+
+https://drive.google.com/file/d/18Ix-DjAso8AjIEkgDZ4Hhlvs29owBgdd/view?usp=drive_link
+
+The features are in this file. 
+
+https://drive.google.com/file/d/14o6EzsaH_2lXdCbsvCpWexwAGKE3KbM2/view?usp=drive_link
+
+
+Summarize the data 
+
+How many flows ? 
+
+Duration of flows ? 
+
+Data to be split - for Training, Test and Prediction. 
+
+
+Challenges in the data 
+
+Categorical variables, Numerical variables. 
+
+Some correlated columns 
+
+Result : 
+
+Prediction accuracy of Traffic class (application)  based on ML algorithms.   
+
+Precision and Accuracy should be reported. 
+
+Copying is Fatal. 

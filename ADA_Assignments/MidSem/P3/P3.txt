@@ -1,0 +1,15 @@
+Predict the traffic class for this data set using ML algorithms 
+
+https://drive.google.com/file/d/1x6n9l_oEIK14wZU0lDh2KmmutyqE7zjv/view?usp=sharing
+
+Summarize the data 
+
+Number of flows
+
+Duration of flows
+
+Packet sizes 
+
+Prediction of traffic class -  Precision, Recall 
+
+Copying is fatal

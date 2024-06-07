@@ -1,0 +1,47 @@
+I have a Fabric Link dataset. It has 4 columns named 'source_node', 'destination_node', 'Utilization', 'datetime'.
+
+'source_node': contains integers representing source nodes
+'destination_node': contains integers representing source nodes
+'Utilization': total utilization of bandwidth
+'datetime': contains the date and time stamp of the time of recording
+
+The plan is to find all the possible unique ('source_node',  'destination_node') pairs (also called links) and for each ('source_node',  'destination_node') pair (or link), filter out the 'Utilization', 'datetime' columns. Then do further analysis.
+
+The target variable of interest is 'Utilization'.
+
+What are the things I can do for Exploratory Data Analysis?
+
+List ways to find groups of ('source_node',  'destination_node') pairs or links, which are similar to each other in terms of 'Utilization' over time.
+
+
+
+# Things to try
+
+- ('source_node',  'destination_node') pairwise analysis.
+- Find the pairs with the following property:
+    - Maximum average 'Utilization'
+    - Minimum average 'Utilization'
+    - Average 'Utilization'
+
+- Try getting a table consisting of 'source_node' on horizontal and 'destination_node' on vertical and corresponding average 'Utilization' colour-coded based on value.
+
+# Finding the links which are similar to each other.
+- Method 1:
+    - Think of each link to be a 'd' dimensional vector storing the 'Utilization' value over 'd' days.
+    - Use some similarity or clustering technique to find cluster of similar groups.
+    - Use tsne plot and show these clusters.
+    - One possible way to choose the clusters is by deciding the no. of example plots to consider and divide accordingly.
+- Method 2:
+    - Think of each link as a distribution of 'Utilization' values.
+    - Use some technique to identify groups of links with similar distribution: Kolmogorov-Smirnov Test
+
+# Weekday and Weekend patterns (should be clear from the analysis of corresponding strip plots from the plots selecting above)
+- Plot strip-plots of 'Utilization' and mean 'Utilization' w.r.t. days of week and months of year
+
+# What the inferences that you can draw from the above plots?
+Select some plots and use the help of ChatGPT to create some cool inferences.
+
+# How are the bandwidth Utilizations?
+- Plot the histogram or distribution plot of 'Utilization'
+Make inferences based on this
+- Also try grouping the Utilization based on dates and plot the strip-plots of bandwidth utilization on that particular day and also connect the mean bandwidth utilization.

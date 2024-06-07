@@ -1,0 +1,10 @@
+For Assignment 1,  this is harder than what I had expected.  So, what I would expect is plots of the Fabric link paths is sufficient for now.  
+
+
+1. Are there any links which show similar patterns ?   
+
+2. Are there weekday or weekend patterns ? 
+
+3. What are the inferences that you can draw ?  
+
+4. How are the bandwidth utlizations ? 

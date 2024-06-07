@@ -1,0 +1,11 @@
+Identify the Protocol based on port based analysis for this dataset.  
+
+https://drive.google.com/file/d/19YS-QU-jiNAQmQrj0YrkHTg-mhp6Cpqe/view?usp=sharing
+
+How many flows are there in the dataset ? 
+
+Total number of bytes and flow duration ? 
+
+What are the big flows ? 
+
+Copying is Fatal. 
