@@ -1,5 +1,8 @@
 # Fast Text-based Clustering using Bag of Words
 
+![Project Asset](project-asset.png)
+
+
 This project explores various clustering techniques applied to text data, specifically using the "Bag of Words" dataset from the UCI Machine Learning Repository. The primary focus is on using **Jaccard Similarity** as a measure of closeness between documents.
 
 ## Project Overview
